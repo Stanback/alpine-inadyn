@@ -34,3 +34,12 @@ docker run \
    inadyn
 ```
 
+# Pre-built Image
+
+You can download a pre-built image from
+[Docker Hub](https://hub.docker.com/r/stanback/inadyn-alpine/):
+
+```
+docker pull stanback/inadyn-alpine
+```
+
