@@ -14,7 +14,7 @@ ENV INADYN_RELEASE https://github.com/troglobit/inadyn/releases/download/v2.1/in
 ENV LIBITE_RELEASE https://github.com/troglobit/libite/releases/download/v1.8.2/libite-1.8.2.tar.xz
 ENV LIBCONFUSE_RELEASE https://github.com/martinh/libconfuse/releases/download/v3.0/confuse-3.0.tar.xz
 
-RUN apk --update add curl xz build-base libressl-dev gnutls-dev ca-certificates && \
+RUN apk --update add curl xz build-base libressl-dev ca-certificates && \
     mkdir -p /tmp/src/libite /tmp/src/libconfuse /tmp/src/inadyn && \
     # Libite
     curl -Lo /tmp/src/libite.tar.xz $LIBITE_RELEASE && \
@@ -34,7 +34,7 @@ RUN apk --update add curl xz build-base libressl-dev gnutls-dev ca-certificates 
     curl -Lo /tmp/src/inadyn.tar.xz $INADYN_RELEASE && \
     tar --strip-components=1 -C /tmp/src/inadyn -xJf /tmp/src/inadyn.tar.xz && \
     cd /tmp/src/inadyn && \
-    ./configure && \
+    ./configure --enable-openssl && \
     make && \
     make install && \
     # Cleanup
@@ -42,4 +42,4 @@ RUN apk --update add curl xz build-base libressl-dev gnutls-dev ca-certificates 
     apk del xz build-base && \
     rm -rf /var/cache/apk/*
 
-CMD ["inadyn", "--foreground"]
+CMD ["inadyn", "--foreground", "--loglevel=info"]
