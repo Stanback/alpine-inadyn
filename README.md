@@ -1,4 +1,4 @@
-# Inadyn Docker Image
+# Inadyn + Alpine Linux Docker Image
 
 This repository contains a Dockerfile for building a
 lighweight Docker image with the [inadyn](http://troglobit.com/inadyn.html)
@@ -34,8 +34,7 @@ docker run \
 
 # Pre-built Image
 
-You can download a pre-built image from
-[Docker Hub](https://hub.docker.com/r/stanback/inadyn-alpine/):
+You can download a pre-built image from [Docker Hub](https://hub.docker.com/r/stanback/alpine-inadyn/):
 
 ```
 docker pull stanback/inadyn-alpine
