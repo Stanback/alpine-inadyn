@@ -11,7 +11,7 @@
 FROM alpine:edge
 
 ENV INADYN_RELEASE https://github.com/troglobit/inadyn/releases/download/v2.1/inadyn-2.1.tar.xz
-ENV LIBITE_RELEASE https://github.com/troglobit/libite/releases/download/v1.9.2/libite-1.9.2.tar.xz
+ENV LIBITE_RELEASE https://github.com/troglobit/libite/releases/download/v1.8.2/libite-1.8.2.tar.xz
 ENV LIBCONFUSE_RELEASE https://github.com/martinh/libconfuse/releases/download/v3.2/confuse-3.2.tar.xz
 
 RUN apk --update add curl xz build-base libressl-dev ca-certificates && \
