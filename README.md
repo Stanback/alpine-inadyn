@@ -12,7 +12,7 @@ following (the scripts and cache directories are optional):
 ```
 docker run \
    -d \
-   -v $PWD/inadyn.conf:/etc/inadyn.conf \
+   -v $PWD/inadyn.conf:/usr/local/etc/inadyn.conf \
    -v $PWD/scripts:/usr/share/inadyn \
    -v $PWD/cache:/var/cache/inadyn \
    --name=inadyn \
