@@ -1,3 +1,11 @@
+> **Archived — October 16, 2026**
+>
+> This historical inadyn container build and its pinned dependencies are no longer maintained or validated against current releases.
+>
+> Source and history remain available for reference; no further updates or support are planned.
+
+---
+
 # Inadyn + Alpine Linux Docker Image
 
 This repository contains a Dockerfile for building a
